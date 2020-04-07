@@ -1,3 +1,0 @@
-PORT = 8000
-CREDS = '../../firebase-key.json'
-DATABASE_URL = "https://timetable-api-bca1f.firebaseio.com"
