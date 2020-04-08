@@ -1,0 +1,24 @@
+{
+  "name": "timetableapi",
+  "version": "1.0.0",
+  "description": "_(This is the project repository dedicated for ISOC 2020 project)_",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashikka/Timetable-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashikka/Timetable-API/issues"
+  },
+  "homepage": "https://github.com/ashikka/Timetable-API#readme"
+}

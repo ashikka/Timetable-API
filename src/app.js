@@ -16,12 +16,12 @@ app.use(express.static("public"));
 const userRoute = require("./routes/userRoutes");
 
 //Use Routes
-app.use("/user", userRoute);
+app.use("/api/user", userRoute);
 
 //Firebase imports
-const fireBase = require("./utils/firebase");
+//const fireBase = require("./utils/firebase");
 
-app.use("/user",fireBase);
+//app.use("/user", fireBase);
 
 const port = process.env.PORT;
 app.listen(port || 3000, () => {
