@@ -1,0 +1,260 @@
+ {
+  "status": "success",
+  "name": "Ashikka Gupta",
+  "regNo": "19BCE2022",
+  "monday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ]
+   "tuesday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ]
+   "wednesday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ]
+   "thursday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ]
+   "friday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ]
+}
