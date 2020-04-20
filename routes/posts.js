@@ -7,7 +7,7 @@ const Timetable = require("../models/Timetable");
 const someArray= [];
 
 //Routes targeting all users
-router.post("/", async function(req,res){
+router.post("/create", async (req,res) =>{
   const timetable = new Timetable({
     status : req.body.status,
     name : req.body.name,
@@ -26,8 +26,10 @@ router.post("/", async function(req,res){
   }
 });
 
-router.get("/:personName", function(req,res){
-  Timetable.findOne({name : req.params.personName}, function(err, foundName){
+//Routes targeting specific user
+
+router.post("/freeslots/:personName", (req,res) =>{
+  Timetable.findOne({name : req.params.personName}, (err, foundName) =>{
     if(foundName){
       // foundName.monday.forEach(element => {
       //   Object.keys(element).forEach((el) =>{
@@ -45,13 +47,12 @@ router.get("/:personName", function(req,res){
   });
 });
  
-//Routes targeting specific user
-router.put("/:personName",function(req,res){
+router.put("/put/:personName", (req,res) =>{
   Timetable.update(
       {name : req.params.personName},
       {status: req.body.status , name : req.body.name , regNo : req.body.regNo, monday: req.body.monday , tuesday: req.body.tuesday , wednesday: req.body.wednesday, thursday: req.body.thursday, friday: req.body.friday},
       {overwrite : true},
-      function(err){
+      (err) =>{
         if(!err){
           res.send("Successfully updated using put request");
         }
@@ -59,11 +60,11 @@ router.put("/:personName",function(req,res){
   );
 });
 
-router.patch("/:personName", function(req,res){
+router.patch("/patch/:personName", (req,res) =>{
   Timetable.update(
     {name : req.params.personName},
     {$set : req.body},
-    function(err){
+    (err) =>{
       if(!err){
         res.send("Updated using patch request");
       }else{
@@ -72,10 +73,10 @@ router.patch("/:personName", function(req,res){
     });
 });
 
-router.delete("/:personName",function(req,res){
+router.delete("/delete/:personName", (req,res) =>{
   Timetable.deleteOne(
     {name : req.params.personName},
-  function(err){
+  (err)=>{
     if(err){
       res.send(err);
     }
