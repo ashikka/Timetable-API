@@ -3,7 +3,6 @@
 const express = require("express");
 const router = express.Router();
 const Timetable = require("../models/Timetable");
-
 const someArray= [];
 
 //Routes targeting all users
@@ -28,8 +27,8 @@ router.post("/create", async (req,res) =>{
 
 //Routes targeting specific user
 
-router.post("/freeslots/:personName", (req,res) =>{
-  Timetable.findOne({name : req.params.personName}, (err, foundName) =>{
+router.post("/freeslots/:user", (req,res) =>{
+  Timetable.findOne({user: req.query._id}, (err, foundName) =>{
     if(foundName){
       // foundName.monday.forEach(element => {
       //   Object.keys(element).forEach((el) =>{
@@ -47,9 +46,9 @@ router.post("/freeslots/:personName", (req,res) =>{
   });
 });
  
-router.put("/put/:personName", (req,res) =>{
+router.put("/put/:user", (req,res) =>{
   Timetable.update(
-      {name : req.params.personName},
+      {user : req.query._id},
       {status: req.body.status , name : req.body.name , regNo : req.body.regNo, monday: req.body.monday , tuesday: req.body.tuesday , wednesday: req.body.wednesday, thursday: req.body.thursday, friday: req.body.friday},
       {overwrite : true},
       (err) =>{
@@ -60,9 +59,9 @@ router.put("/put/:personName", (req,res) =>{
   );
 });
 
-router.patch("/patch/:personName", (req,res) =>{
+router.patch("/patch/:user", (req,res) =>{
   Timetable.update(
-    {name : req.params.personName},
+    {user: req.query._id},
     {$set : req.body},
     (err) =>{
       if(!err){
@@ -73,9 +72,9 @@ router.patch("/patch/:personName", (req,res) =>{
     });
 });
 
-router.delete("/delete/:personName", (req,res) =>{
+router.delete("/delete/:user", (req,res) =>{
   Timetable.deleteOne(
-    {name : req.params.personName},
+    {user : req.query._id},
   (err)=>{
     if(err){
       res.send(err);
