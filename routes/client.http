@@ -1,0 +1,18 @@
+//Route for creating timetable
+POST http://localhost:3000/timetable/create
+
+
+//Route for finding out free slots
+POST http://localhost:3000/timetable/freeslots/:user
+
+
+//Route to make a put request
+PUT http://localhost:3000/timetable/put/:user
+
+
+//Route to make a patch request
+PATCH http://localhost:3000/timetable/patch/:user
+
+
+//Route to make a delete request
+DELETE http://localhost:3000/timetable/delete/:user
