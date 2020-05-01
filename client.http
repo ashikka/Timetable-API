@@ -16,13 +16,3 @@ PATCH http://localhost:3000/timetable/patch/:user
 
 //Route to make a delete request
 DELETE http://localhost:3000/timetable/delete/:user
- //   foundName.monday.forEach(element => {
-    //     Object.keys(element).forEach((el) =>{
-    //         console.log(el);
-    //       if(element[el].free == true)
-    //       {
-    //         someArray.push(el);
-    //       }
-    //     });
-    //     res.send(someArray);
-    // });

@@ -17,7 +17,7 @@ var userSchema = new mongoose.Schema({
   name : String,
   year : String,
   phoneNo : String,
-  email : String
+  email : String,
 });
 
 module.exports ={Timetable: mongoose.model('Timetable', timetableSchema), User: mongoose.model('User', userSchema)};
