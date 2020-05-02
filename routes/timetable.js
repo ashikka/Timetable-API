@@ -3,28 +3,29 @@
 const express = require("express");
 const router = express.Router();
 const {Timetable} = require("../models/db");
+const {User} = require("../models/db");
 
-const someArray= [];
-
-
-
+const freeSlotArray= [];
 //Routes targeting all users
-
 router.post("/create", async (req,res) =>{
-  const timetable = new Timetable({
-    name : req.body.name,
-    monday : req.body.monday,
-    tuesday : req.body.tuesday,
-    wednesday : req.body.wednesday,
-    thursday: req.body.thursday,
-    friday : req.body.friday
-  });
-  try{
-  const savedTimetable = await  timetable.save();
-  res.json(savedTimetable);
-  } catch(err){
-    res.json({message : err});
+
+  try {
+    const name = req.body.person;
+    const timetable = new Timetable({
+      monday : req.body.monday,
+      tuesday : req.body.tuesday,
+      wednesday : req.body.wednesday,
+      thursday: req.body.thursday,
+      friday : req.body.friday
+    });
+    const user = await User.findOneAndUpdate({name}, {$push: {timetable}})
+    
+  } catch (err) {
+    console.log(err);
+     res.json({message : err});
+     return;
   }
+  res.json('done')
 });
 
 //Routes targeting specific user
@@ -37,7 +38,8 @@ router.post('/find', async (req, res) => {
       return;
   }else{
    res.send(foundUser);
-  }
+   }
+
 });
 
 router.post("/freeSlots", async(req,res)=>{

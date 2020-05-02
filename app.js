@@ -20,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/timeDB', {useNewUrlParser: true, use
   console.log("Connected to DB");
 });
 mongoose.set('useCreateIndex', true);
-
+mongoose.set('useFindAndModify',false);
 
  app.listen(3000,function(){
    console.log("Listening on port 3000");
