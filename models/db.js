@@ -9,6 +9,7 @@ const timetableSchema = new mongoose.Schema({
   friday: { $type: Array },
 }, { typeKey: '$type' });
 
+
 const userSchema = new mongoose.Schema({
   regNo: { type: String, required: true },
   name: String,
@@ -18,6 +19,5 @@ const userSchema = new mongoose.Schema({
   timetable: [timetableSchema],
 
 });
-
 
 module.exports = { Timetable: mongoose.model('Timetable', timetableSchema), User: mongoose.model('User', userSchema) };

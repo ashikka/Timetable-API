@@ -19,6 +19,10 @@ const postTimetable = require('./routes/timetable');
 
 app.use('/timetable', postTimetable);
 
+const postDuties = require('./routes/availableSlots');
+
+app.use('/duties', postDuties);
+
 // Database
 mongoose.connect('mongodb://localhost:27017/timeDB', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
   // eslint-disable-next-line no-console
