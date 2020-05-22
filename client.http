@@ -1,31 +1,358 @@
-//Route for creating timetable
+
+//Route for creating new user
+POST http://localhost:3000/user/create 
+Content-Type: application/json
+
+{
+  "regNo": "19BCE2090",
+  "name": "Nope",
+  "year": "1",
+  "phoneNo": "100",
+  "email": "ok@gmail.com"
+}
+
+####
+
+
+
+//Route to make a find user
+POST http://localhost:3000/user/find
+Content-Type: application/json
+
+{
+  "name": "Nope"
+}
+
+
+####
+
+//Route to make a patch request for user
+PATCH http://localhost:3000/user/patch
+Content-Type: application/json
+
+{
+  "name": "Nope"
+}
+
+
+####
+
+
+
+//Route to make a delete request for user
+DELETE http://localhost:3000/user/delete 
+Content-Type: application/json
+{
+  "name": "Nope"
+}
+
+
+ ####
+
+ 
+//Route for creating new user timetable
 POST http://localhost:3000/timetable/create
+Content-Type: application/json
+
+{
+   {
+  "name" : "Nope",
+  "monday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": false
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ],
+   "tuesday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ],
+   "wednesday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ],
+   "thursday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ],
+   "friday": [
+    {
+      "period":1,
+      "free": true
+    },
+      {
+      "period":2,
+      "free": true
+    },
+      {
+      "period":3,
+      "free": true
+    },
+      {
+      "period":4,
+      "free": true
+    },
+      {
+      "period":5,
+      "free": true
+    },
+      {
+      "period":6,
+      "free": true
+    },
+      {
+      "period":7,
+      "free": true
+    },
+      {
+      "period":8,
+      "free": true
+    },
+      {
+      "period":9,
+      "free": true
+    },
+      {
+      "period":10,
+      "free": true
+    },
+      {
+      "period":11,
+      "free": true
+    },
+      {
+      "period":12,
+      "free": true
+    }
+ 
+  ]
+}
+}
 
 ####
 
 
-//Route for finding out free slots
-POST http://localhost:3000/timetable/freeslots/:user
+
+//Route to make a find user timetable
+POST http://localhost:3000/timetable/find
+Content-Type: application/json
+
+{
+  "name": "Nope"
+}
+
+
+####
+
+//Route to find free slots of user
+POST http://localhost:3000/timetable/freeSlots
+Content-Type: application/json
+
+{
+  "name": "Nope"
+}
+
 
 ####
 
 
 
-//Route to make a put request
-PUT http://localhost:3000/timetable/put/:user
+ //Route to find out all users free in that slot
+POST http://localhost:3000/availableSlots/find
+Content-Type: application/json
 
-
-####
-
-//Route to make a patch request
-PATCH http://localhost:3000/timetable/patch/:user
-
-
-####
+{
+  "day": "monday",
+  "period": "1"
+}
 
 
 
-//Route to make a delete request
-DELETE http://localhost:3000/timetable/delete/:user
 
 

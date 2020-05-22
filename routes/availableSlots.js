@@ -17,18 +17,8 @@ router.post('/find', async (req, res) => {
     }
     docs.forEach((doc) => {
       doc.timetable.forEach((index) => {
-
         const specifiedDay = req.body;
-        if (specifiedDay.day === 'monday') {
-          index.monday.forEach((i) => {
-            const specifiedPeriod = req.body;
-            if (i.period == specifiedPeriod.period) {
-              if (i.free === true) {
-                availablePeopleArray.push(doc.name);
-              }
-            }
-          });
-        }
+
         if (specifiedDay.day === 'monday') {
           index.monday.forEach((i) => {
             const specifiedPeriod = req.body;
@@ -39,7 +29,7 @@ router.post('/find', async (req, res) => {
             }
           });
         } if (specifiedDay.day === 'tuesday') {
-          index.monday.forEach((i) => {
+          index.tuesday.forEach((i) => {
             const specifiedPeriod = req.body;
             if (i.period == specifiedPeriod.period) {
               if (i.free === true) {
@@ -48,7 +38,7 @@ router.post('/find', async (req, res) => {
             }
           });
         } if (specifiedDay.day === 'wednesday') {
-          index.monday.forEach((i) => {
+          index.wednesday.forEach((i) => {
             const specifiedPeriod = req.body;
             if (i.period == specifiedPeriod.period) {
               if (i.free === true) {
@@ -57,7 +47,7 @@ router.post('/find', async (req, res) => {
             }
           });
         } if (specifiedDay.day === 'thursday') {
-          index.monday.forEach((i) => {
+          index.thursday.forEach((i) => {
             const specifiedPeriod = req.body;
             if (i.period == specifiedPeriod.period) {
               if (i.free === true) {
@@ -67,7 +57,7 @@ router.post('/find', async (req, res) => {
           });
         }
         if (specifiedDay.day === 'friday') {
-          index.monday.forEach((i) => {
+          index.friday.forEach((i) => {
             const specifiedPeriod = req.body;
             if (i.period == specifiedPeriod.period) {
               if (i.free === true) {
