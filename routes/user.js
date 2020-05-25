@@ -4,22 +4,34 @@
 const express = require('express');
 
 const router = express.Router();
+const { check, validationResult } = require('express-validator');
 const { User } = require('../models/db');
 
 
-router.post('/create', async (req, res) => {
-  const user = new User({
-    regNo: req.body.regNo,
-    name: req.body.name,
-    year: req.body.year,
-    phoneNo: req.body.phoneNo,
-    email: req.body.email,
-  });
-  try {
-    const savedUser = await user.save();
-    res.json(savedUser);
-  } catch (err) {
-    res.json({ message: err });
+router.post('/create', [
+  check('regNo').isAlphanumeric().isLength({ min: 9, max: 9 }),
+  check('name').isAlpha(),
+  check('year').isNumeric().isLength({ max: 1 }),
+  check('phoneNo').isNumeric().isLength({ min: 10, max: 10 }),
+  check('email').isEmail(),
+], async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(422).json({ errors: errors.array() });
+  } else {
+    const user = new User({
+      regNo: req.body.regNo,
+      name: req.body.name,
+      year: req.body.year,
+      phoneNo: req.body.phoneNo,
+      email: req.body.email,
+    });
+    try {
+      const savedUser = await user.save();
+      res.json(savedUser);
+    } catch (err) {
+      res.json({ message: err });
+    }
   }
 });
 
