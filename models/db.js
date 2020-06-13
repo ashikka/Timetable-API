@@ -11,12 +11,12 @@ const timetableSchema = new mongoose.Schema({
 
 
 const userSchema = new mongoose.Schema({
-  regNo: { type: String, required: true },
-  name: String,
-  year: String,
-  phoneNo: String,
-  email: String,
-  timetable: [timetableSchema],
+  regNo: { type: String, required: true, unique: true },
+  name: { type: String, required: true, unique: true },
+  year: { type: Number, required: true },
+  phoneNo: { type: Number, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
+  timetable: { type: [timetableSchema], required: true },
 
 });
 

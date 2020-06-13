@@ -10,10 +10,12 @@
     "ejs": "^3.0.2",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "express-validator": "^6.5.0",
     "mongoose": "^5.9.9",
     "mongoose-beautiful-unique-validation": "^7.1.1",
     "uuid": "^7.0.3",
-    "uuid-mongodb": "^2.1.4"
+    "uuid-mongodb": "^2.1.4",
+    "validator": "^13.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
