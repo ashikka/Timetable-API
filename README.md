@@ -1,6 +1,6 @@
 # Timetable-API
 
-Here, I've created an API for managing timetables and finding out freeslots for user. This was my ISOC'20 Web Developement project. I would like to thank my mentor [Divyansh Khandewal](https://github.com/noob-master147) without whose help and constant guidance, this would not have been possible. This was truly and enriching experience. I have learnt a lot from this project. This API is divided into 3 routes namely:
+Here, I've created an API for managing timetables and finding out freeslots for user. This was my ISOC'20 Web Developement project. I would like to thank my mentor [Divyansh Khandewal](https://github.com/noob-master147) without whose help and constant guidance, this would not have been possible. This was truly an enriching experience. I have learnt a lot from this project. This API is divided into 3 routes namely:
 1. ## **user.js**
       This is a route for accepting basic user details and performing CRUD operations. 
 
